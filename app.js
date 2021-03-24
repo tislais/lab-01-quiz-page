@@ -6,6 +6,7 @@ import {
 
 const startQuizButton = document.getElementById('start-quiz-button');
 const quizResultsDiv = document.getElementById('quiz-results-div');
+const quizResultsComment = document.getElementById('quiz-results-comment');
 
 // set event listeners to update state and DOM
 
@@ -38,9 +39,21 @@ startQuizButton.addEventListener('click', () => {
     if (isYes(questionThreeAnswer)) score++;
     questionCount++;
 
-    quizResultsDiv.textContent = `You scored ${score}/${questionCount} points`;
+
+    const quizResultsPercent = (score / questionCount) * 100;
+    const percent = Math.round(quizResultsPercent);
+
+    quizResultsDiv.textContent = `You scored ${percent}%`;
+    quizResultsComment.classList.remove('hidden');
     
+    if(score === 0) {
+        quizResultsComment.textContent = 'Now that\'s just sad.';
+    } else if (score < questionCount && score > 0) {
+        quizResultsComment.textContent = `Not bad, but I think you could do better.`;
+    } else {
+        quizResultsComment.textContent = 'Whoa! Perfect!';
+    }
     
-    
+
 
 });
