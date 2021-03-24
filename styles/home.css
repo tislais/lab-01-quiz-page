@@ -1,1 +1,22 @@
 /* add home page styles here */
+
+strong {
+    font-weight: bold;
+}
+
+.cube-type img {
+    width: 100px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 1000px;
+}
+
+ol, ul {
+	max-width: 600px;
+}
