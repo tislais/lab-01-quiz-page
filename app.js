@@ -43,4 +43,4 @@ startQuizButton.addEventListener('click', () => {
     
     
 
-})
+});
