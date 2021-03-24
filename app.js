@@ -46,7 +46,7 @@ startQuizButton.addEventListener('click', () => {
     quizResultsDiv.textContent = `You scored ${percent}%`;
     quizResultsComment.classList.remove('hidden');
     
-    if(score === 0) {
+    if (score === 0) {
         quizResultsComment.textContent = 'Now that\'s just sad.';
     } else if (score < questionCount && score > 0) {
         quizResultsComment.textContent = `Not bad, but I think you could do better.`;
