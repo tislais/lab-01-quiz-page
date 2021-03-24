@@ -18,7 +18,7 @@ startQuizButton.addEventListener('click', () => {
     if (!wantsToTakeQuiz) {
         alert('Hey, no worries! I hope you enjoyed learning about twisty puzzles anyway!');
         return;
-    };
+    }
 
     let score = 0;
     let questionCount = 0;
